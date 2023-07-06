@@ -1,24 +1,20 @@
-<Html>    
-<Head>  
-<title>  
-Example of Paragraph tag  
-</title>  
-</Head>  
-<Body>   
-<p> <!-- It is a Paragraph tag for creating the paragraph -->  
-<b> HTML </b> stands for <i> <u> Hyper Text Markup Language. </u> </i> It is used to create a web pages and applications. This language   
-is easily understandable by the user and also be modifiable. It is actually a Markup language, hence it provides a flexible way for designing the  
-web pages along with the text.   
-</p>  
-HTML file is made up of different elements. <b> An element </b> is a collection of <i> start tag, end tag, attributes and the text between them</i>.   
-</p>  
-
-<?php
-if ($_GET['run']) {
-  # This code will run if ?run=true is set.
-  exec("echo "Hello world"");
-}
-?>
-  <a href="?run=true">Click Me!</a>
-</Body>  
-</Html> 
+<html>  
+<body>  
+<form method="post">  
+Enter First Number:  
+<input type="number" name="number1" /><br><br>  
+Enter Second Number:  
+<input type="number" name="number2" /><br><br>  
+<input  type="submit" name="submit" value="Add">  
+</form>  
+<?php  
+    if(isset($_POST['submit']))  
+    {  
+        $number1 = $_POST['number1'];  
+        $number2 = $_POST['number2'];  
+        $sum =  $number1+$number2;     
+echo "The sum of $number1 and $number2 is: ".$sum;   
+}  
+?>  
+</body>  
+</html>  
